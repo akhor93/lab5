@@ -3,7 +3,14 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+	$(".friend_name").click(replaceName);
 })
+
+function replaceName(e) {
+	e.preventDefault();
+	var name = $(this).text();
+	$(this).text(anagrammedName(name));
+}
 
 /*
  * Function that is called when the document is ready.
